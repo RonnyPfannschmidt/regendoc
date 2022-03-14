@@ -76,7 +76,7 @@ def default_substituters(targetdir):
         Substituter(match=re.escape(targetdir), replace="/path/to/example"),
         Substituter(match=re.escape(os.getcwd()), replace="$PWD"),
         Substituter(match=r"at 0x[0-9a-f]+>", replace="at 0xdeadbeef>"),
-        Substituter(match=re.escape(sys.prefix), replace='$PYTHON_PREFIX'),
+        Substituter(match=re.escape(sys.prefix), replace="$PYTHON_PREFIX"),
     ]
 
 
