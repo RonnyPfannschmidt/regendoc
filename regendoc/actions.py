@@ -21,16 +21,16 @@ def process(name, target_dir, action, verbose):
         # the cwd option is insecure and used for examples
         # that already have all files in place
         # like an examples folder for example
-        if action['cwd'] == '.':
-            src = os.path.abspath(os.path.dirname(action['file']))
+        if action["cwd"] == ".":
+            src = os.path.abspath(os.path.dirname(action["file"]))
 
-            target_dir = os.path.join(target_dir, 'CWD')
+            target_dir = os.path.join(target_dir, "CWD")
         else:
             src = os.path.join(
-                os.path.abspath(os.path.dirname(action['file'])),
-                action['cwd'])
+                os.path.abspath(os.path.dirname(action["file"])), action["cwd"]
+            )
 
-            target_dir = os.path.join(target_dir, action['cwd'])
+            target_dir = os.path.join(target_dir, action["cwd"])
 
         shutil.copytree(src, target_dir)
 
